@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passei e Te Conto | Apostila IBGE 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --azul:#0d1b36;
+      --rose:#c98a74;
+      --rose-claro:#f1dfd7;
+      --bg:#faf7f5;
+      --texto:#4b5563;
+      --white:#ffffff;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:var(--bg);
+      color:var(--azul);
+    }
+
+    section{
+      padding:80px 8%;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      background:
+      linear-gradient(to bottom right, #faf7f5, #fff);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:60px;
+      align-items:center;
+    }
+
+    .badge{
+      display:inline-block;
+      background:var(--rose-claro);
+      color:var(--rose);
+      padding:10px 18px;
+      border-radius:999px;
+      font-size:.9rem;
+      font-weight:600;
+      margin-bottom:25px;
+    }
+
+    h1{
+      font-family:'Poppins', sans-serif;
+      font-size:clamp(3.5rem,7vw,6rem);
+      line-height:0.95;
+      margin-bottom:10px;
+      color:var(--azul);
+      font-weight:800;
+      letter-spacing:-3px;
+    }
+
+    .subtitle{
+      color:var(--rose);
+      font-size:clamp(1.5rem,3vw,2.2rem);
+      display:block;
+      margin-bottom:30px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:2px;
+    }
+
+    .hero p{
+      color:var(--texto);
+      font-size:1.05rem;
+      line-height:1.9;
+      margin-bottom:28px;
+    }
+
+    .benefits{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      margin-bottom:35px;
+    }
+
+    .benefit{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      color:var(--texto);
+      line-height:1.7;
+    }
+
+    .benefit span{
+      color:var(--rose);
+      font-size:1.1rem;
+      font-weight:700;
+    }
+
+    .price-box{
+      background:var(--white);
+      border-radius:28px;
+      padding:40px;
+      box-shadow:0 15px 40px rgba(0,0,0,.06);
+      border:1px solid #eee;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .price-box::before{
+      content:'';
+      position:absolute;
+      width:220px;
+      height:220px;
+      background:rgba(201,138,116,.12);
+      border-radius:50%;
+      top:-90px;
+      right:-90px;
+    }
+
+    .price-box h2{
+      font-family:'Cormorant Garamond', serif;
+      font-size:2.7rem;
+      margin-bottom:15px;
+      position:relative;
+      z-index:2;
+    }
+
+    .mini{
+      color:var(--texto);
+      line-height:1.8;
+      margin-bottom:25px;
+      position:relative;
+      z-index:2;
+    }
+
+    .old-price{
+      color:#9ca3af;
+      text-decoration:line-through;
+      font-size:1rem;
+      margin-bottom:8px;
+      position:relative;
+      z-index:2;
+    }
+
+    .new-price{
+      font-size:4.5rem;
+      font-weight:800;
+      color:var(--rose);
+      line-height:1;
+      margin-bottom:10px;
+      position:relative;
+      z-index:2;
+      font-family:'Poppins', sans-serif;
+      letter-spacing:-3px;
+    }
+
+    .payment{
+      color:var(--texto);
+      margin-bottom:12px;
+      position:relative;
+      z-index:2;
+    }
+
+    .urgency{
+      color:var(--rose);
+      font-weight:700;
+      margin-bottom:28px;
+      position:relative;
+      z-index:2;
+    }
+
+    .btn{
+      display:inline-block;
+      width:100%;
+      text-align:center;
+      background:var(--azul);
+      color:white;
+      text-decoration:none;
+      padding:18px;
+      border-radius:999px;
+      font-weight:700;
+      transition:.3s;
+      position:relative;
+      z-index:2;
+      font-size:1rem;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+      background:#13264b;
+    }
+
+    .secure{
+      margin-top:18px;
+      text-align:center;
+      color:var(--texto);
+      font-size:.9rem;
+      position:relative;
+      z-index:2;
+    }
+
+    /* SOBRE */
+
+    .about{
+      background:white;
+    }
+
+    .about-content{
+      max-width:900px;
+      margin:auto;
+      text-align:center;
+    }
+
+    .about h2{
+      font-family:'Cormorant Garamond', serif;
+      font-size:4rem;
+      margin-bottom:10px;
+    }
+
+    .brand{
+      color:var(--rose);
+      font-size:1.3rem;
+      font-weight:700;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-bottom:35px;
+      display:block;
+    }
+
+    .about p{
+      color:var(--texto);
+      line-height:2;
+      font-size:1.05rem;
+      margin-bottom:22px;
+    }
+
+    .values{
+      margin-top:40px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:18px;
+    }
+
+    .value{
+      background:var(--bg);
+      padding:14px 22px;
+      border-radius:999px;
+      color:var(--azul);
+      font-weight:600;
+      border:1px solid #eee;
+    }
+
+    footer{
+      padding:30px;
+      text-align:center;
+      color:#6b7280;
+      font-size:.95rem;
+      background:var(--bg);
+    }
+
+    @media(max-width:768px){
+
+      section{
+        padding:70px 6%;
+      }
+
+      .hero{
+        min-height:auto;
+        padding-top:40px;
+      }
+
+      .price-box{
+        padding:30px;
+      }
+
+      .new-price{
+        font-size:3.6rem;
+      }
+
+      .about h2{
+        font-size:3rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- PRIMEIRA SESSÃO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div>
+
+          <div class="badge">
+            Material Digital • Concurso IBGE 2026
+          </div>
+
+          <h1>
+            50 QUESTÕES
+          </h1>
+
+          <span class="subtitle">
+            APOSTILA COMENTADA
+          </span>
+
+          <p>
+            A apostila ideal para quem deseja começar a estudar para o cargo de
+            <strong>Recenseador do IBGE 2026</strong> com questões inéditas,
+            linguagem simples e foco total no estilo da banca.
+          </p>
+
+          <div class="benefits">
+
+            <div class="benefit">
+              <span>✔</span>
+              <div>
+                Questões inéditas de <strong>Português e Matemática</strong>
+                inspiradas nas últimas provas do IBGE.
+              </div>
+            </div>
+
+            <div class="benefit">
+              <span>✔</span>
+              <div>
+                Gabarito totalmente comentado para você entender o motivo de cada resposta.
+              </div>
+            </div>
+
+            <div class="benefit">
+              <span>✔</span>
+              <div>
+                Material pensado para iniciantes que querem estudar de forma prática e objetiva.
+              </div>
+            </div>
+
+            <div class="benefit">
+              <span>✔</span>
+              <div>
+                Excelente para revisar conteúdo, treinar interpretação e ganhar velocidade.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="price-box">
+
+          <h2>
+            Apostila Digital
+          </h2>
+
+          <p class="mini">
+            Um material acessível, direto ao ponto e criado especialmente
+            para quem quer aumentar as chances de aprovação no IBGE 2026.
+          </p>
+
+          <div class="old-price">
+            de R$ 19,90
+          </div>
+
+          <div class="new-price">
+            R$ 7,90
+          </div>
+
+          <div class="payment">
+            pagamento único • acesso imediato
+          </div>
+
+          <div class="urgency">
+            Oferta promocional por tempo limitado
+          </div>
+
+          <a 
+            href="https://pay.kiwify.com.br/vOMnpFF"
+            class="btn"
+            target="_blank"
+          >
+            QUERO GARANTIR MINHA APOSTILA
+          </a>
+
+          <div class="secure">
+            ✔ Compra segura via Kiwify <br>
+            ✔ Download imediato após o pagamento
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SEGUNDA SESSÃO -->
+
+  <section class="about">
+
+    <div class="container">
+
+      <div class="about-content">
+
+        <h2>
+          Passei e Te Conto
+        </h2>
+
+        <span class="brand">
+          Estratégia • Rotina • Aprovação
+        </span>
+
+        <p>
+          O <strong>Passei e Te Conto</strong> nasceu com o objetivo de ajudar
+          concurseiros iniciantes a estudarem de forma mais estratégica,
+          organizada e acessível.
+        </p>
+
+        <p>
+          Muitos estudantes não sabem por onde começar, quais conteúdos estudar
+          ou como praticar questões no estilo das provas reais.
+          Por isso, a marca foi criada para transformar conteúdos difíceis
+          em materiais simples, objetivos e realmente úteis para quem está começando.
+        </p>
+
+        <p>
+          Aqui você encontra apostilas, simulados, questões comentadas,
+          planners e materiais didáticos pensados para facilitar sua rotina
+          e aumentar sua confiança durante a preparação.
+        </p>
+
+        <div class="values">
+
+          <div class="value">Estratégia</div>
+          <div class="value">Rotina</div>
+          <div class="value">Constância</div>
+          <div class="value">Aprovação</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Passei e Te Conto • Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
